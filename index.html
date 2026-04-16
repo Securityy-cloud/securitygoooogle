@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gooogle Login</title>
   <style>
-    body { text-align:center; font-family:Arial; margin-top:100px; }
-    input { display:block; margin:10px auto; padding:10px; width:250px; }
-    button { padding:10px 20px; margin-top:10px; }
+    body { 
+      text-align: center; 
+      font-family: Arial; 
+      margin: 0; 
+      padding: 0; 
+      background: #f4f4f4;
+    }
+    .login-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 320px; /* PC’de dar, telefonda tam uyumlu */
+      margin: 100px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    input {
+      display: block; 
+      margin: 10px auto; 
+      padding: 10px; 
+      width: 90%; 
+      border: 1px solid #ccc; 
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px; 
+      width: 100%; 
+      background: #4285f4; 
+      color: #fff; 
+      border: none; 
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      .login-box { max-width: 95%; }
+      input, button { font-size: 14px; }
+    }
   </style>
   <script>
     function goPrank(event) {
@@ -14,12 +50,9 @@
         <div style="background-color:black; color:lime; text-align:center; font-family:Consolas; margin-top:100px;">
           <h2>>> You have been hacked!</h2>
           <p>(You can protect yourself by contacting us and making a payment; otherwise, your photo will be leaked.)</p>
-          <a href="https://t.me/cyberattcak" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" 
-       alt="Telegram" 
-       width="40" 
-       height="40">
-</a>
+          <a href="https://t.me/Thementori" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" 
+                 alt="Telegram" width="40" height="40">
           </a>
           <p>Click the button and contact me!</p>
         </div>
@@ -28,11 +61,13 @@
   </script>
 </head>
 <body>
-  <h1>Gooogle Login</h1>
-  <form onsubmit="goPrank(event)">
-    <input type="text" placeholder="Username"><br>
-    <input type="password" placeholder="Password"><br>
-    <button type="submit">Continue</button>
-  </form>
+  <div class="login-box">
+    <h1>Gooogle Login</h1>
+    <form onsubmit="goPrank(event)">
+      <input type="text" placeholder="Username"><br>
+      <input type="password" placeholder="Password"><br>
+      <button type="submit">Continue</button>
+    </form>
+  </div>
 </body>
 </html>
